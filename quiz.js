@@ -1,10 +1,12 @@
 console.log(5);
 
+var form = document.getElementById("theQuizForm")
 var submitAnswers = (e) => {
     e.preventDefault();
+
+    alert('Baba Iya Eyan')
     var total = 5;
     var score = 0;
-
     // get provided input
     var q1 = document.forms["quizform"]["q1"].value;
     var q2 = document.forms["quizform"]["q2"].value;
@@ -35,9 +37,11 @@ var submitAnswers = (e) => {
     alert('You scored ' + score + 'out of '+ total);
     return false; 
 
-    window.onload = function(){
-        form.addEventListener('submit', submitAnswers)
-    }
+    
+}
+
+window.onload = function(){
+    form.addEventListener('submit', submitAnswers)
 }
 
 
